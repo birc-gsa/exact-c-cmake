@@ -1,0 +1,20 @@
+tools:
+  TM-Naive:
+    map: "gsa search {genome} {reads} -o {outfile} exact naive"
+  TM-Border:
+    map: "gsa search {genome} {reads} -o {outfile} exact border"
+  TM-KMP:
+    map: "gsa search {genome} {reads} -o {outfile} exact kmp"
+#  search:
+#    map: "{root}/search {genome} {reads} > {outfile}"
+  
+reference-tool: TM-Naive
+
+genomes:
+  length: [100, 500, 1000]
+  chromosomes: 10
+
+reads:
+  number: 10
+  length: [10, 50]
+  edits: 0
